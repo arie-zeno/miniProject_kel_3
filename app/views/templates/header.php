@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Home</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,10 +46,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="<?=BASEURL ?>/index.html" class="nav-item nav-link active">Home</a>
-                        <a href="<?=BASEURL ?>/service.html" class="nav-item nav-link">Data Kependudukan</a>
+                        <a href="<?=BASEURL ?>" class="nav-item nav-link active">Home</a>
                         
                     </div>
-                    <a href="<?=BASEURL ?>/" class="btn btn-primary py-2 px-4">Login</a>
+                    <!-- <a href="<?=BASEURL ?>/" class="btn btn-primary py-2 px-4">Admin</a> -->
+                    <button type="button" class="btn btn-primary py-2 px-4" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Admin
+                          </button>
                 </div>
             </nav>
