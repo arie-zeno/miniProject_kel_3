@@ -10,6 +10,11 @@
       </div>
 
       <h2>Data Penduduk</h2>
+      <div class="row">
+            <div class="col-lg-6">
+                <?php Flasher::flash(); ?>
+            </div>
+        </div>
           <!-- Button trigger modal -->
                 <button type="button" class="btn btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalTambah">
                 Tambah Data Penduduk
