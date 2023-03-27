@@ -9,7 +9,12 @@
 
         public function tambah(){
             if($this->model("Penduduk_model")->tambahDataPenduduk($_POST) > 0){
-                header("Location: " . BASEURL . "/Dashboard/Penduduk");
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard/penduduk");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+                header("Location: " . BASEURL . "/Dashboard/penduduk");
                 exit;
             }
         }
@@ -21,30 +26,55 @@
                 // document.location.href = '".BASEURL."';
                 // </script>
                 // ";
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
                 header("Location: " . BASEURL . "/Dashboard");
                 exit;
             }
         }
         public function tambahKab(){
             if($this->model("Kabupaten_model")->tambahDataKabupaten($_POST) > 0){
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
                 header("Location: " . BASEURL . "/Dashboard");
                 exit;
             }
         }
         public function tambahKec(){
             if($this->model("Kecamatan_model")->tambahDataKecamatan($_POST) > 0){
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
                 header("Location: " . BASEURL . "/Dashboard");
                 exit;
             }
         }
         public function tambahKel(){
             if($this->model("Kelurahan_model")->tambahDataKelurahan($_POST) > 0){
-                header("Location: " . BASEURL . "/Dashboard");
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard/kelurahan");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+                header("Location: " . BASEURL . "/Dashboard/kelurahan");
                 exit;
             }
         }
         public function tambahAgm(){
             if($this->model("Agama_model")->tambahDataAgama($_POST) > 0){
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
                 header("Location: " . BASEURL . "/Dashboard");
                 exit;
             }
@@ -52,14 +82,24 @@
 
         public function tambahPkr(){
             if($this->model("Pekerjaan_model")->tambahDataPekerjaan($_POST) > 0){
-                header("Location: " . BASEURL);
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+                header("Location: " . BASEURL . "/Dashboard");
                 exit;
             }
         }
 
         public function tambahPen(){
             if($this->model("Pendidikan_model")->tambahDataPendidikan($_POST) > 0){
-                header("Location: " . BASEURL);
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header("Location: " . BASEURL . "/Dashboard");
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+                header("Location: " . BASEURL . "/Dashboard");
                 exit;
             }
         }
